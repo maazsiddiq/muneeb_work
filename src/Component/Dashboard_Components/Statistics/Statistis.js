@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import ProfitCard from "./profitCard/pofitCard";
 import CapitalCard from "./capitalCard/capitalCard";
 import axios from "axios";
-import { Row, Container } from "react-bootstrap";
-import { faMoneyBillAlt, faSmile, } from "@fortawesome/free-regular-svg-icons";
+import { Row, Col, Container, Button } from "react-bootstrap";
+import { faMoneyBillAlt, faSmile,} from "@fortawesome/free-regular-svg-icons";
 import {
   faSortAmountUp,
   faHandHolding,
   faCashRegister,
   faUniversity,
   faCreditCard,
-  faPlus
+  faPlus,
+  faHandshake,
+  faUsers
 } from "@fortawesome/free-solid-svg-icons";
 
 import './statistis.css'
@@ -88,9 +90,13 @@ class Statistics extends Component {
 
     return (
       <Container>
+        <Row>
+          <Col md={{offset:2, span:8}} xs={12}>
         <h2 className="profit-Card-top-heading-main"><b>OUR ADVANTAGES</b></h2>
-        <hr style={{width: "14rem", marginBottom: "3rem"}} />
+        <hr style={{width: "14%", marginBottom: "3rem"}} />
         <p className="profit-Card-top-paragraph-main">Lorem, ipsum dolor sit amet consectetur adipisicing elit. ut odio! Eos, quo? Lorem, ipsum dolor sit This content is a little bit longer.</p>
+        </Col>
+        </Row>
         <Row>
           <ProfitCard icon={faPlus} heading="Total Amount" para={total_amount} />
           <ProfitCard icon={faHandHolding} heading="Cash in Hand" para={cash_in_hand} />
@@ -107,10 +113,10 @@ class Statistics extends Component {
           <ProfitCard icon={faSortAmountUp} heading="Charity" para={Charity} />
           <ProfitCard icon={faUniversity} heading="Earning" para={Earning} />
         </Row>
-        <button onClick={this.withDrawHandler}>Withdraw</button>
+        <Button variant="success" onClick={this.withDrawHandler} style={{justifyContent:"center", width:"50%"}} >Withdraw</Button>
         <Row>
-          <CapitalCard heading="Total Captal" para="500" />
-          <CapitalCard heading="Total Profit" para="500" />
+          <CapitalCard icon={faHandshake} heading="Total Captal" para="500" />
+          <CapitalCard icon={faUsers} heading="Total Profit" para="500" />
         </Row>
       </Container>
     );

@@ -10,11 +10,10 @@
   height: 30px;
 }
 
-.NavbarItems {
-  margin-left: auto;
-  color: white !important;
-}
-
 .NavbarItem {
   margin-left: 32px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: poppin;
+  font-weight: bold;
 }

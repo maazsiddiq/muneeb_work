@@ -1,3 +1,11 @@
+.capital-card-centering{
+    text-align: center;
+    margin-top: 10%;
+}
+.capital-icons-style{
+    color: #04B404 !important;
+    margin-bottom: 20%;
+}
 .capital-card-header-heading{
     text-align: center;
     letter-spacing: 1px;
